@@ -35,7 +35,7 @@ public class EchoApplication {
 
     @EventMapping
     public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
-        System.out.println("event: " + event);
+        System.out.println("event: " + "你說的是" + event + "嗎?");
         return new TextMessage(event.getMessage().getText());
     }
 
